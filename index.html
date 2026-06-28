@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>じゃんけんゲーム - rinevo.com</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>じゃんけんゲーム</h1>
+    <div class="score">
+      <div>
+        <div class="label">あなた</div>
+        <div class="value"><span id="player-score">0</span></div>
+      </div>
+      <div>
+        <div class="label">コンピュータ</div>
+        <div class="value"><span id="cpu-score">0</span></div>
+      </div>
+    </div>
+
+    <div class="hand-area">
+      <div class="hand cpu-hand">
+        <div class="hand-label">コンピュータ</div>
+        <div class="hand-emoji" id="cpu-hand">✊</div>
+      </div>
+
+      <div id="result" class="result">出した手を選んでください</div>
+
+      <div class="hand player-hand">
+        <div class="hand-label">あなた</div>
+        <div class="hand-emoji" id="player-hand">✊</div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <div class="choices">
+        <button class="choice" data-move="rock">グー</button>
+        <button class="choice" data-move="scissors">チョキ</button>
+        <button class="choice" data-move="paper">パー</button>
+      </div>
+      <button id="reset" class="reset">リセット</button>
+    </div>
+    
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

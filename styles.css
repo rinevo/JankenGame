@@ -1,0 +1,45 @@
+*{box-sizing:border-box;font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Hiragino Kaku Gothic ProN','Meiryo',sans-serif}
+body{display:flex;align-items:center;justify-content:center;height:100vh;background:linear-gradient(135deg,#f0f4ff,#f7fff0)}
+.container{width:360px;background:#fff;padding:20px;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.12);text-align:center;display:flex;flex-direction:column;justify-content:space-between;height:85vh}
+h1{margin:0 0 12px;font-size:1.6rem}
+.score{display:flex;justify-content:space-between;margin-bottom:12px;font-weight:600}
+/* prominent score styling */
+.score{background:linear-gradient(90deg,#fff,#f8fbff);padding:10px 14px;border-radius:10px;box-shadow:0 6px 18px rgba(16,24,40,0.06);gap:12px}
+.score > div{display:flex;flex-direction:column;align-items:center}
+.score .label{font-size:0.9rem;color:#666;margin-bottom:6px}
+#player-score,#cpu-score{font-size:56px;font-weight:800;padding:8px 12px;border-radius:8px;background:#ffffff;border:1px solid rgba(0,0,0,0.04);box-shadow:0 8px 18px rgba(0,0,0,0.06)}
+
+@keyframes scorePulse{0%{transform:scale(1)}50%{transform:scale(1.12)}100%{transform:scale(1)}}
+.score-pulse{animation:scorePulse .36s ease-in-out}
+.choices{display:flex;gap:8px;justify-content:center}
+.choice{flex:1;padding:12px;border-radius:8px;border:2px solid #ddd;background:#fafafa;cursor:pointer;transition:transform .12s,background .12s}
+.choice:hover{transform:translateY(-4px);background:#fff}
+.hand-area{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:12px 0}
+.hand{display:flex;flex-direction:column;align-items:center}
+.hand-label{font-size:.85rem;margin-bottom:6px;color:#666}
+.hand-emoji{font-size:192px;transition:transform .25s ease}
+.hand.vs{font-weight:700}
+
+/* shake animation */
+@keyframes shake {
+	0%{transform:rotate(0deg)}
+	25%{transform:rotate(-20deg)}
+	50%{transform:rotate(20deg)}
+	75%{transform:rotate(-10deg)}
+	100%{transform:rotate(0deg)}
+}
+
+.hand-emoji.shake{animation:shake .28s ease-in-out}
+.hand-emoji.reveal{transform:scale(1.1)}
+
+.result{min-height:48px;display:flex;align-items:center;justify-content:center;border-radius:8px;padding:8px;background:#f7f7f9}
+
+.controls{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:12px}
+.controls .choices{flex:1}
+.history{max-height:120px;overflow:auto;text-align:left;margin-bottom:12px}
+.history h2{margin:6px 0}
+#history-list{padding-left:16px;margin:0}
+.reset{padding:8px 12px;border-radius:8px;border:0;background:#efefef;cursor:pointer}
+.win{color:green;font-weight:700}
+.lose{color:#d32f2f;font-weight:700}
+.draw{color:#555;font-weight:700}
